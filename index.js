@@ -45,7 +45,7 @@ function resolveCollision(ball, otherBall) {
 function distance(x1, y1, x2, y2) {
   const xDiff = x1 - x2;
   const yDiff = y1 - y2;
-  return Math.sqrt(Math.pow(xDiff, 2) + Math.pow(yDiff, 2));
+  return Math.hypot(xDiff, yDiff);
 }
 
 const canvas = document.querySelector('canvas');
