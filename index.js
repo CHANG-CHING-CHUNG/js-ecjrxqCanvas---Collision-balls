@@ -99,7 +99,8 @@ class Ball {
     for (let i = 0; i < balls.length; i++) {
       if (this === balls[i]) continue;
       if (
-        distance(this.x, this.y, balls[i].x, balls[i].y) - this.radius * 2 <
+        distance(this.x, this.y, balls[i].x, balls[i].y) -
+          (this.radius + balls[i].radius) <
         0
       ) {
         resolveCollision(this, balls[i]);
